@@ -7,7 +7,7 @@ import { withRouter } from "react-router-dom";
 import ChatHttpServer from '../../utils/chatHttpServer';
 import ChatSocketServer from '../../utils/chatSocketServer';
 
-import ChatList from './chat-list/ChatList';
+import ChatList from './chat-list/comapnyList';
 import Conversation from './conversation/Conversation';
 
 import './Home.css';

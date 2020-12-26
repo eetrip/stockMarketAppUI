@@ -38,7 +38,7 @@ class ChatHttpServer {
     login(userCredential) {
         return new Promise(async (resolve, reject) => {
             try {
-                const response = await axios.post('http://localhost:4000/login', userCredential);
+                const response = await axios.post('http://localhost:3000/login', userCredential);
                 resolve(response.data);
             } catch (error) {
                 reject(error);
@@ -49,7 +49,7 @@ class ChatHttpServer {
     checkUsernameAvailability(username) {
         return new Promise(async (resolve, reject) => {
             try {
-                const response = await axios.post('http://localhost:4000/usernameAvailable', {
+                const response = await axios.post('http://localhost:3000/usernameAvailable', {
                     username: username
                 });
                 resolve(response.data);
@@ -62,7 +62,7 @@ class ChatHttpServer {
     register(userCredential) {
         return new Promise(async (resolve, reject) => {
             try {
-                const response = await axios.post('http://localhost:4000/register', userCredential);
+                const response = await axios.post('http://localhost:3000/register', userCredential);
                 resolve(response.data);
             } catch (error) {
                 reject(error);
@@ -73,7 +73,7 @@ class ChatHttpServer {
     userSessionCheck(userId) {
         return new Promise(async (resolve, reject) => {
             try {
-                const response = await axios.post('http://localhost:4000/userSessionCheck', {
+                const response = await axios.post('http://localhost:3000/userSessionCheck', {
                     userId: userId
                 });
                 resolve(response.data);
@@ -86,7 +86,7 @@ class ChatHttpServer {
     getMessages(userId, toUserId) {
         return new Promise(async (resolve, reject) => {
             try {
-                const response = await axios.post('http://localhost:4000/listCompanies', {
+                const response = await axios.post('http://localhost:3000/listCompanies', {
                     userId: userId,
                     toUserId: toUserId
                 });

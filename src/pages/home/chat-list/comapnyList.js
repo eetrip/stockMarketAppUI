@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 // import ChatSocketServer from '../../../utils/ChatSocketServer';
 import ChatSocketServer from '../../../utils/chatSocketServer';
-import "./ChatList.css";
+import "./companyList.css";
 
 class ChatList extends Component {
 
@@ -17,7 +17,7 @@ class ChatList extends Component {
 
   componentDidMount() {
     const userId = this.props.userId;
-    ChatSocketServer.getChatList(userId);
+    ChatSocketServer.getCompanyList(userId);
     ChatSocketServer.eventEmitter.on('chat-list-response', this.createChatListUsers);
   }
 
